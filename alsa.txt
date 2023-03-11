@@ -1,0 +1,13 @@
+to list all sound cards, you first have to install the alsa-utils package:
+sudo pacman -S alsa-utils
+
+Then you can list all sound cards with the following command:
+aplay -l
+
+Now there should be multiple sound, but one should have "intel" in the name.
+
+now open the alsa config under /usr/share/alsa/alsa.conf
+those 3 lines should all have the index of the before mentioned sound card:
+defaults.pcm.card 1
+defaults.pcm.device 0
+defaults.ctl.card 1
